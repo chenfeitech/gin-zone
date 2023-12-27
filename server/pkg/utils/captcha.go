@@ -10,7 +10,7 @@ type Captcha struct {
 }
 
 // GenerateCaptcha 生成验证码
-func GenerateCaptcha() (id, bs64 string, err error) {
+func GenerateCaptcha() (id, bs64, answer string, err error) {
 	return base64Captcha.NewCaptcha(base64Driver, store).Generate()
 }
 
